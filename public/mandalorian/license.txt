@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mandalorian N1
+* source:	https://sketchfab.com/3d-models/mandalorian-n1-a83ea17c6b45438187e1ea97b44c8cfa
+* author:	C.J..Goldman (https://sketchfab.com/C.J..Goldman)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mandalorian N1" (https://sketchfab.com/3d-models/mandalorian-n1-a83ea17c6b45438187e1ea97b44c8cfa) by C.J..Goldman (https://sketchfab.com/C.J..Goldman) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
