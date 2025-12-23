@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
-import { experiences } from "../constants";
+import { usePortfolioContext } from "../context/PortfolioContext";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { textVariant } from "../utils/motion";
 
@@ -57,6 +57,8 @@ const ExperienceCard = ({ experience }) => {
 };
 
 const Experience = () => {
+  const { experiences } = usePortfolioContext() || { experiences: [] };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -70,12 +72,16 @@ const Experience = () => {
 
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={`experience-${index}`}
-              experience={experience}
-            />
-          ))}
+          {experiences && experiences.length > 0 ? (
+            experiences.map((experience, index) => (
+              <ExperienceCard
+                key={`experience-${index}`}
+                experience={experience}
+              />
+            ))
+          ) : (
+            <p className='text-white text-center'>Loading experiences...</p>
+          )}
         </VerticalTimeline>
       </div>
     </>

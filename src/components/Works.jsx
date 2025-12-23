@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
 import SectionWrapper from "../hoc/SectionWrapper";
-import { projects } from "../constants";
+import { usePortfolioContext } from "../context/PortfolioContext";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
@@ -68,6 +68,8 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const { projects } = usePortfolioContext() || { projects: [] };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -89,9 +91,13 @@ const Works = () => {
       </div>
 
       <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+        {projects && projects.length > 0 ? (
+          projects.map((project, index) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))
+        ) : (
+          <p className='text-white'>Loading projects...</p>
+        )}
       </div>
     </>
   );

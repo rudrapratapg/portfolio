@@ -1,34 +1,51 @@
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { Suspense, useState, useEffect } from "react";
+import { Canvas, useThree } from "@react-three/fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 
 import { EffectComposer, Bloom, Noise, Vignette } from '@react-three/postprocessing';
 
 import CanvasLoader from "../Loader";
 
+const Effects = () => {
+  const { gl } = useThree();
+  const [canRender, setCanRender] = useState(!!gl);
+
+  useEffect(() => {
+    setCanRender(!!gl);
+  }, [gl]);
+
+  if (!canRender) return null;
+
+  return (
+    <EffectComposer>
+      <Bloom luminanceThreshold={0.1} luminanceSmoothing={10} height={500} />
+      <Noise opacity={0.02} />
+      <Vignette eskil={false} offset={0.1} darkness={1.1} />
+    </EffectComposer>
+  );
+};
+
 const UFO = () => {
-
     const ufo = useGLTF("./mandalorian/scene.gltf");
-
 
   return (
     <>
         <pointLight intensity={1} />
         <ambientLight intensity={10} />
         <spotLight 
-            position={[10, 5, 10]}  // Directly above the object
-            angle={Math.PI / 6}      // Narrow beam
-            penumbra={1}             // Softer edges
-            intensity={10}          // High intensity to brighten the top
+            position={[10, 5, 10]}
+            angle={Math.PI / 6}
+            penumbra={1}
+            intensity={10}
             castShadow
             shadow-mapSize-width={1024}
             shadow-mapSize-height={1024}
         />
         <spotLight 
-            position={[0, 2, 5]}  // Slightly above and in front of the object
-            angle={Math.PI / 4}       // Wider beam to cover the front
-            penumbra={0.5}            // Softer edges
-            intensity={10}            // Lower intensity compared to the top light
+            position={[0, 2, 5]}
+            angle={Math.PI / 4}
+            penumbra={0.5}
+            intensity={10}
             castShadow
             shadow-mapSize-width={1024}
             shadow-mapSize-height={1024}
@@ -38,11 +55,7 @@ const UFO = () => {
         rotation={[-0.5, -1.0, -1]}
         />
 
-        <EffectComposer>
-            <Bloom luminanceThreshold={0.1} luminanceSmoothing={10} height={500} />
-            <Noise opacity={0.02} />
-            <Vignette eskil={false} offset={0.1} darkness={1.1} />
-        </EffectComposer>
+        <Effects />
         
 
     </>
@@ -55,7 +68,7 @@ const UFOCanvas = () => {
       shadows
       frameloop='demand'
       dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{ preserveDrawingBuffer: false }}
       camera={{
         fov: 45,
         near: 0.1,
@@ -71,8 +84,6 @@ const UFOCanvas = () => {
           minPolarAngle={Math.PI / 2}
         />
         <UFO />
-
-        <Preload all />
       </Suspense>
     </Canvas>
   );

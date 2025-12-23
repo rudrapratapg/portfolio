@@ -6,18 +6,18 @@
         "tagline": "Software Engineering Lead building scalable SaaS and enterprise platforms with Java, Spring Boot, and React",
         "about": "Creative and strategic Software Engineering Lead with 8+ years of experience building scalable SaaS and enterprise systems across healthcare and fintech domains. Expert in Java 17/21, Spring Boot, Microservices, and ReactJS, with hands-on experience on AWS and Azure. Proven leader of cross-functional teams delivering secure, high-availability platforms serving 2M+ users. Passionate about clean architecture, DevSecOps, and leveraging Spring AI and ChatGPT to enhance developer productivity and product intelligence.",
         "contacts": [
-        {
-            "title": "LinkedIn",
-            "icon": "linkedin",
-            "link": "https://www.linkedin.com/in/deepak-gola/",
-            "linkType": "url"
-        },
-        {
-            "title": "Email",
-            "icon": "email",
-            "link": "er.deepakgola@gmail.com",
-            "linkType": "email"
-        }
+            {
+                "title": "LinkedIn",
+                "icon": "linkedin",
+                "link": "https://www.linkedin.com/in/deepak-gola/",
+                "linkType": "url"
+            },
+            {
+                "title": "Email",
+                "icon": "email",
+                "link": "er.deepakgola@gmail.com",
+                "linkType": "email"
+            }
         ]
     },
     "services": [
@@ -39,94 +39,154 @@
         }
     ],
     "technologies": [
-        { "name": "Java 17 / 21", "icon": "java" },
-        { "name": "Spring Boot", "icon": "spring" },
-        { "name": "Microservices", "icon": "microservices" },
-        { "name": "React JS", "icon": "reactjs" },
-        { "name": "TypeScript", "icon": "typescript" },
-        { "name": "REST APIs", "icon": "rest" },
-        { "name": "Spring Security", "icon": "security" },
-        { "name": "OAuth2 & JWT", "icon": "oauth" },
-        { "name": "Docker", "icon": "docker" },
-        { "name": "Kubernetes", "icon": "kubernetes" },
-        { "name": "AWS", "icon": "aws" },
-        { "name": "Azure", "icon": "azure" },
-        { "name": "Kafka & RabbitMQ", "icon": "kafka" },
-        { "name": "Redis", "icon": "redis" },
-        { "name": "PostgreSQL & MySQL", "icon": "database" },
-        { "name": "MongoDB", "icon": "mongodb" },
-        { "name": "CI/CD (GitHub Actions, Jenkins)", "icon": "cicd" },
-        { "name": "JUnit & Mockito", "icon": "testing" },
-        { "name": "Playwright", "icon": "playwright" },
-        { "name": "Spring AI & ChatGPT", "icon": "openai" }
+        {
+            "name": "Java 17 / 21",
+            "icon": "java"
+        },
+        {
+            "name": "Spring Boot",
+            "icon": "spring"
+        },
+        {
+            "name": "Microservices",
+            "icon": "microservices"
+        },
+        {
+            "name": "React JS",
+            "icon": "reactjs"
+        },
+        {
+            "name": "TypeScript",
+            "icon": "typescript"
+        },
+        {
+            "name": "REST APIs",
+            "icon": "rest"
+        },
+        {
+            "name": "Spring Security",
+            "icon": "security"
+        },
+        {
+            "name": "OAuth2 & JWT",
+            "icon": "oauth"
+        },
+        {
+            "name": "Docker",
+            "icon": "docker"
+        },
+        {
+            "name": "Kubernetes",
+            "icon": "kubernetes"
+        },
+        {
+            "name": "AWS",
+            "icon": "aws"
+        },
+        {
+            "name": "Azure",
+            "icon": "azure"
+        },
+        {
+            "name": "Kafka & RabbitMQ",
+            "icon": "kafka"
+        },
+        {
+            "name": "Redis",
+            "icon": "redis"
+        },
+        {
+            "name": "PostgreSQL & MySQL",
+            "icon": "database"
+        },
+        {
+            "name": "MongoDB",
+            "icon": "mongodb"
+        },
+        {
+            "name": "CI/CD (GitHub Actions, Jenkins)",
+            "icon": "cicd"
+        },
+        {
+            "name": "JUnit & Mockito",
+            "icon": "testing"
+        },
+        {
+            "name": "Playwright",
+            "icon": "playwright"
+        },
+        {
+            "name": "Spring AI & ChatGPT",
+            "icon": "openai"
+        }
     ],
     "experiences": [
         {
-        "title": "Software Engineering Lead",
-        "company_name": "Optum Global Solutions",
-        "icon": "optum",
-        "iconBg": "#2E2E2E",
-        "date": "Mar 2025 - Present",
-        "points": [
-            "Engineered secure healthcare SaaS microservices architecture on Azure, supporting 2M+ users and exceeding SLAs by 15%.",
-            "Led threat modeling and secure coding practices, reducing critical vulnerabilities by 40% and aligning with HIPAA and HITRUST standards.",
-            "Modernized authorization using Java 17+, Spring Boot, OAuth2, and RBAC, improving API response times by 35%.",
-            "Championed DevSecOps automation, closing top compliance gaps and saving 15+ engineering hours per week.",
-            "Optimized Docker and Kubernetes deployments via GitHub Actions CI/CD, reducing release failures by 30%.",
-            "Mentored engineers, led code reviews and standups, and fostered a high-trust, innovation-driven culture."
-        ]
+            "title": "Software Engineering Lead",
+            "company_name": "Optum Global Solutions",
+            "icon": "optum",
+            "iconBg": "#2E2E2E",
+            "date": "Mar 2025 - Present",
+            "points": [
+                "Engineered secure healthcare SaaS microservices architecture on Azure, supporting 2M+ users and exceeding SLAs by 15%.",
+                "Led threat modeling and secure coding practices, reducing critical vulnerabilities by 40% and aligning with HIPAA and HITRUST standards.",
+                "Modernized authorization using Java 17+, Spring Boot, OAuth2, and RBAC, improving API response times by 35%.",
+                "Championed DevSecOps automation, closing top compliance gaps and saving 15+ engineering hours per week.",
+                "Optimized Docker and Kubernetes deployments via GitHub Actions CI/CD, reducing release failures by 30%.",
+                "Mentored engineers, led code reviews and standups, and fostered a high-trust, innovation-driven culture."
+            ]
         },
         {
-        "title": "Senior Software Engineer",
-        "company_name": "Cognizant Technology Solutions",
-        "icon": "cognizant",
-        "iconBg": "#2E2E2E",
-        "date": "Jul 2022 - Mar 2025",
-        "points": [
-            "Built a full-stack ReactJS and Java microservices platform with Elasticsearch fuzzy search, improving case resolution speed by 25%.",
-            "Developed event-driven APIs and automated workflows to reduce manual operational effort.",
-            "Automated regression testing using Playwright and JUnit, reducing production defects by 40%.",
-            "Implemented Splunk dashboards to monitor reliability across multiple microservices.",
-            "Mentored engineers and drove Agile ceremonies, improving sprint velocity and delivery predictability."
-        ]
+            "title": "Senior Software Engineer",
+            "company_name": "Cognizant Technology Solutions",
+            "icon": "cognizant",
+            "iconBg": "#2E2E2E",
+            "date": "Jul 2022 - Mar 2025",
+            "points": [
+                "Built a full-stack ReactJS and Java microservices platform with Elasticsearch fuzzy search, improving case resolution speed by 25%.",
+                "Developed event-driven APIs and automated workflows to reduce manual operational effort.",
+                "Automated regression testing using Playwright and JUnit, reducing production defects by 40%.",
+                "Implemented Splunk dashboards to monitor reliability across multiple microservices.",
+                "Mentored engineers and drove Agile ceremonies, improving sprint velocity and delivery predictability."
+            ]
         },
         {
-        "title": "Senior Software Engineer",
-        "company_name": "Newgen Software",
-        "icon": "newgen",
-        "iconBg": "#383E56",
-        "date": "Dec 2020 - Jul 2022",
-        "points": [
-            "Designed and delivered a drag-and-drop low-code banking portal using micro-frontend architecture.",
-            "Implemented Spring Security with JWT-based authentication and authorization for compliance-grade security.",
-            "Led a team of full-stack engineers, ensuring high-quality end-to-end delivery.",
-            "Collaborated closely with UI/UX and business stakeholders to align technical solutions with user needs.",
-            "Recognized with the Standing Ovation Award for zero-defect project delivery."
-        ]
+            "title": "Senior Software Engineer",
+            "company_name": "Newgen Software",
+            "icon": "newgen",
+            "iconBg": "#383E56",
+            "date": "Dec 2020 - Jul 2022",
+            "points": [
+                "Designed and delivered a drag-and-drop low-code banking portal using micro-frontend architecture.",
+                "Implemented Spring Security with JWT-based authentication and authorization for compliance-grade security.",
+                "Led a team of full-stack engineers, ensuring high-quality end-to-end delivery.",
+                "Collaborated closely with UI/UX and business stakeholders to align technical solutions with user needs.",
+                "Recognized with the Standing Ovation Award for zero-defect project delivery."
+            ]
         },
         {
-        "title": "Java Developer",
-        "company_name": "Wheebox (GroupHR Services)",
-        "icon": "wheebox",
-        "iconBg": "#E6DEDD",
-        "date": "Oct 2019 - Dec 2020",
-        "points": [
-            "Developed backend services using Java and Spring for online assessment platforms.",
-            "Improved system performance by 20% through query optimization and caching strategies.",
-            "Actively participated in debugging, production issue resolution, and maintenance cycles."
-        ]
+            "title": "Java Developer",
+            "company_name": "Wheebox (GroupHR Services)",
+            "icon": "wheebox",
+            "iconBg": "#E6DEDD",
+            "date": "Oct 2019 - Dec 2020",
+            "points": [
+                "Developed backend services using Java and Spring for online assessment platforms.",
+                "Improved system performance by 20% through query optimization and caching strategies.",
+                "Actively participated in debugging, production issue resolution, and maintenance cycles."
+            ]
         },
         {
-        "title": "Java Developer",
-        "company_name": "CodesLipi Infotech",
-        "icon": "codeslipi",
-        "iconBg": "#383E56",
-        "date": "Sep 2017 - Oct 2019",
-        "points": [
-            "Built backend services using Java, Spring, and SQL across multiple enterprise applications.",
-            "Handled requirements analysis, API development, debugging, and release management.",
-            "Provided production support and contributed to documentation and knowledge transfer."
-        ]
+            "title": "Java Developer",
+            "company_name": "CodesLipi Infotech",
+            "icon": "codeslipi",
+            "iconBg": "#383E56",
+            "date": "Sep 2017 - Oct 2019",
+            "points": [
+                "Built backend services using Java, Spring, and SQL across multiple enterprise applications.",
+                "Handled requirements analysis, API development, debugging, and release management.",
+                "Provided production support and contributed to documentation and knowledge transfer."
+            ]
         }
     ],
     "testimonials": [

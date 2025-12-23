@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
+import { usePortfolioContext } from "../context/PortfolioContext";
 
 const FeedbackCard = ({
   index,
@@ -46,6 +46,8 @@ const FeedbackCard = ({
 );
 
 const Feedbacks = () => {
+  const { testimonials } = usePortfolioContext() || { testimonials: [] };
+
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
       <div
@@ -57,9 +59,13 @@ const Feedbacks = () => {
         </motion.div>
       </div>
       <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
-        ))}
+        {testimonials && testimonials.length > 0 ? (
+          testimonials.map((testimonial, index) => (
+            <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+          ))
+        ) : (
+          <p className='text-white'>Loading testimonials...</p>
+        )}
       </div>
     </div>
   );
