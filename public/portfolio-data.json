@@ -1,0 +1,256 @@
+{
+  "personalInfo": {
+    "name": "Deepak Gola",
+    "title": "Java Full Stack Developer",
+    "email": "er.deepakgola@gmail.com",
+    "tagline": "I am a full stack java developer, develops user interfaces and web applications",
+    "about": "Experienced and motivated developer with a strong background in design and development. Adept at adapting to both independent and collaborative work environments, with a focus on delivering high-quality results. Passionate about learning new technologies and implementing innovative solutions. Quick to grasp new concepts and eager to work with the latest technologies. Let's collaborate to turn your ideas into reality!",
+    "contacts": [
+      {
+        "title": "LinkedIn",
+        "icon": "linkedin",
+        "link": "https://www.linkedin.com/in/deepak-gola/",
+        "linkType": "url"
+      },
+      {
+        "title": "Email",
+        "icon": "email",
+        "link": "er.deepakgola@gmail.com",
+        "linkType": "email"
+      }
+    ]
+  },
+  "services": [
+    {
+      "title": "Web Developer",
+      "icon": "web"
+    },
+    {
+      "title": "React Developer",
+      "icon": "mobile"
+    },
+    {
+      "title": "Backend Developer",
+      "icon": "backend"
+    },
+    {
+      "title": "Full Stack Developer",
+      "icon": "creator"
+    }
+  ],
+  "technologies": [
+    {
+      "name": "JavaScript",
+      "icon": "javascript"
+    },
+    {
+      "name": "React JS",
+      "icon": "reactjs"
+    },
+    {
+      "name": "Redux Toolkit",
+      "icon": "redux"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "tailwind"
+    },
+    {
+      "name": "Git",
+      "icon": "git"
+    },
+    {
+      "name": "Figma",
+      "icon": "figma"
+    },
+    {
+      "name": "docker",
+      "icon": "docker"
+    },
+    {
+      "name": "OpenAI",
+      "icon": "openai"
+    },
+    {
+      "name": "Rest API",
+      "icon": "rest"
+    },
+    {
+      "name": "Spring",
+      "icon": "spring"
+    },
+    {
+      "name": "Java",
+      "icon": "java"
+    }
+  ],
+  "experiences": [
+    {
+      "title": "Software Developer",
+      "company_name": "Cognizant",
+      "icon": "cognizant",
+      "iconBg": "#2E2E2E",
+      "date": "Jul 2023 - Aug 2024",
+      "points": [
+        "Developed widgets based on React JS to migrate from salesforce as per Adobe Illustrator designs.",
+        "Developed automation scripts using the Playwright framework for a Salesforce-to-React JS migration project.",
+        "Ensured timely delivery of project milestones with a focus on quality and minimal issues.",
+        "Collaborated with the client team to resolve blockers and provide clarifications.",
+        "Mentored team members on the Playwright framework to enhance team capabilities."
+      ]
+    },
+    {
+      "title": "Associate Projects",
+      "company_name": "Cognizant",
+      "icon": "cognizant",
+      "iconBg": "#2E2E2E",
+      "date": "Apr 2022 - Jul 2023",
+      "points": [
+        "Upgraded legacy project from Java 1.4/WebLogic 8.1 to Java 11/WebLogic 14c with modern IDE support and coding practices",
+        "Replaced outdated packages, wrote multi-cluster deployment scripts, and resolved Java Swing UI issues.",
+        "Delivered high-quality milestones with zero post-production bugs, leading to six additional projects awarded by the client.",
+        "Ensured timely delivery of project milestones with a focus on quality and minimal issues.",
+        "Collaborated with the client team to resolve blockers and provide clarifications."
+      ]
+    },
+    {
+      "title": "Software Developer",
+      "company_name": "Newgen",
+      "icon": "newgen",
+      "iconBg": "#383E56",
+      "date": "Dec 2020 - Mar 2022",
+      "points": [
+        "Developed a web application from scratch using React JS, enabling users to create customizable portals without coding.",
+        "Recreated and developed custom components with features like localization, theming, and responsive design.",
+        "Implemented drag-and-drop functionality for dynamic form components with up to two levels of nesting.",
+        "Migrated the legacy Spring MVC based backend to Spring Boot and made it scalable."
+      ]
+    },
+    {
+      "title": "Java Developer",
+      "company_name": "Wheebox",
+      "icon": "wheebox",
+      "iconBg": "#E6DEDD",
+      "date": "Oct 2019 - Dec 2020",
+      "points": [
+        "Developed and implemented new features for an online assessment system, including bulk registration and detailed reporting.",
+        "Coordinated with clients to understand and implement custom requirements.",
+        "Applied best practices for coding, unit testing, and defect resolution, and contributed to product improvement suggestions."
+      ]
+    },
+    {
+      "title": "Java Developer",
+      "company_name": "CodesLipi Infotech",
+      "icon": "codeslipi",
+      "iconBg": "#383E56",
+      "date": "Sep 2018 - Oct 2019",
+      "points": [
+        "Contributed to the development of a hospital management system, managing doctor, staff, patient records, and hospital operations.",
+        "Engaged in coding, unit testing, defect resolution, and knowledge transfer documentation.",
+        "Supported production and provided assistance during the warranty period."
+      ]
+    },
+    {
+      "title": "Java Developer",
+      "company_name": "CodesLipi Infotech",
+      "icon": "codeslipi",
+      "iconBg": "#E6DEDD",
+      "date": "Sep 2018 - Oct 2019",
+      "points": [
+        "Developed a training center management system, handling staff and student registration, course management, and salary management.",
+        "Applied best practices in coding, unit testing, and defect resolution, and prepared knowledge transfer documentation.",
+        "Addressed queries, provided assistance during production, and made necessary code changes."
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "testimonial": "Deepak's ability to solve complex technical issues and deliver on time is unmatched. His work led to zero post-production defects and five new SOWs for our team. We couldn't have asked for a better performer.",
+      "name": "Rekha Ravichandran",
+      "designation": "Manager at",
+      "company": "Cognizant",
+      "image": ""
+    },
+    {
+      "testimonial": "Deepak's exceptional problem-solving skills and dedication were key to our success. His contributions not only resolved complex issues but also earned him a well-deserved award. His work consistently exceeded expectations.",
+      "name": "Mohit",
+      "designation": "Manager at",
+      "company": "Newgen",
+      "image": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "PromptHub",
+      "description": "Developed a web application that enables users to share, create, edit, and manage prompts. The application requires user authentication via Google accounts, implemented using NextAuth. The platform allows seamless collaboration and prompt sharing among users, fostering a community-driven environment for prompt-based content creation",
+      "tags": [
+        {
+          "name": "next_js",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "next_auth",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "mongodb",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "tailwind",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "image": "promptHub",
+      "source_code_link": "https://github.com/rudrapratapg/Project_promptopia?tab=readme-ov-file"
+    },
+    {
+      "name": "Spring AI",
+      "description": "Designed and implemented the backend for an AI-driven project utilizing Java and Spring Boot. Leveraged Spring AI and ChatGPT to generate dynamic responses through a series of customized prompts and templates. Developed RESTful APIs to facilitate interaction with the GPT model, ensuring tailored and contextually relevant AI-generated content.",
+      "tags": [
+        {
+          "name": "java",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "spring_ai",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "spring_boot",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "rest_api",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "image": "springAI",
+      "source_code_link": "https://github.com/rudrapratapg/Project_promptopia?tab=readme-ov-file"
+    },
+    {
+      "name": "Online Assessment",
+      "description": "Engineered a comprehensive online assessment platform featuring role-based access control for Super Admins, Sub Admins, Test Creators, Teachers, and Students. The system provides a dashboard for administrators to manage user roles, create and organize question banks, and oversee the creation and distribution of assessments. This robust platform supports extensive role management allowing admins to promote or demote user and appoint or dismiss sub-admins with ease.",
+      "tags": [
+        {
+          "name": "java",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "jsp",
+          "color": "green-text-gradient"
+        },
+        {
+          "name": "spring_mvc",
+          "color": "blue-text-gradient"
+        },
+        {
+          "name": "html",
+          "color": "pink-text-gradient"
+        }
+      ],
+      "image": "onlineAssessment",
+      "source_code_link": "https://github.com/DarkHavoc/Olympiad"
+    }
+  ]
+}
