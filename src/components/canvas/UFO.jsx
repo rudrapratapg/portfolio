@@ -8,21 +8,24 @@ import CanvasLoader from "../Loader";
 
 const Effects = () => {
   const { gl } = useThree();
-  const [canRender, setCanRender] = useState(!!gl);
+  
+  // Check if renderer is valid before attempting to create EffectComposer
+  if (!gl || !gl.getContext) {
+    return null;
+  }
 
-  useEffect(() => {
-    setCanRender(!!gl);
-  }, [gl]);
-
-  if (!canRender) return null;
-
-  return (
-    <EffectComposer>
-      <Bloom luminanceThreshold={0.1} luminanceSmoothing={10} height={500} />
-      <Noise opacity={0.02} />
-      <Vignette eskil={false} offset={0.1} darkness={1.1} />
-    </EffectComposer>
-  );
+  try {
+    return (
+      <EffectComposer>
+        <Bloom luminanceThreshold={0.2} luminanceSmoothing={15} height={500} />
+        <Noise opacity={0.01} />
+        <Vignette eskil={false} offset={0.1} darkness={1.1} />
+      </EffectComposer>
+    );
+  } catch (error) {
+    console.warn('EffectComposer failed to initialize:', error);
+    return null;
+  }
 };
 
 const UFO = () => {
@@ -65,16 +68,22 @@ const UFO = () => {
 const UFOCanvas = () => {
   return (
     <Canvas
-      shadows
+      shadows={false}
       frameloop='demand'
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: false }}
+      dpr={[1, 1.5]}
+      gl={{ 
+        preserveDrawingBuffer: false,
+        antialias: true,
+        alpha: true,
+        powerPreference: 'high-performance',
+      }}
       camera={{
         fov: 45,
         near: 0.1,
         far: 200,
         position: [-4, 3, 6],
       }}
+      style={{ pointerEvents: 'none' }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls

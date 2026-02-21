@@ -3,10 +3,6 @@
  * This module exports functions to get data from either GitHub or local JSON
  */
 
-// Import the static data as fallback
-import * as staticConstants from './index';
-
-// Import all available icons
 import {
   javascript,
   typescript,
@@ -26,6 +22,18 @@ import {
   junit,
   spring,
   java,
+  microservices,
+  oauth,
+  security,
+  aws,
+  azure,
+  kafka,
+  redis,
+  database,
+  cicd,
+  testing,
+  playwright,
+  kubernetes,
   mobile,
   backend,
   creator,
@@ -36,9 +44,12 @@ import {
   newgen,
   wheebox,
   codeslipi,
+  optum,
+  promptHub,
+  springAI,
+  onlineAssessment
 } from '../assets';
 
-// Icon mapping from string names to actual imported assets
 const iconMap = {
   javascript,
   typescript,
@@ -61,6 +72,18 @@ const iconMap = {
   junit,
   spring,
   java,
+  microservices,
+  oauth,
+  security,
+  aws,
+  azure,
+  kafka,
+  redis,
+  database,
+  cicd,
+  testing,
+  playwright,
+  kubernetes,
   mobile,
   backend,
   creator,
@@ -71,23 +94,30 @@ const iconMap = {
   newgen,
   wheebox,
   codeslipi,
+  optum,
+  promptHub,
+  springAI,
+  onlineAssessment
 };
 
-// Function to resolve icon name to actual image path/module
 const resolveIcon = (iconName) => {
   if (!iconName) return null;
   
   const normalizedName = iconName.toLowerCase().trim();
-  return iconMap[normalizedName] || null;
+  const resolved = iconMap[normalizedName] || iconMap[iconName];
+  
+  // Validate that the resolved icon is a string (valid path)
+  if (resolved && typeof resolved === 'string') {
+    return resolved;
+  }
+  
+  return null;
 };
 
 export const getConstantsData = (fetchedData) => {
-  if (!fetchedData) {
-    // Return static data if no data is fetched yet
-    return staticConstants;
-  }
+  console.log('fetcheddata :: ', fetchedData);
+  if (!fetchedData) return {};
 
-  // Transform fetched data to match the current component interface
   const {
     personalInfo = {},
     services = [],
@@ -95,58 +125,50 @@ export const getConstantsData = (fetchedData) => {
     experiences = [],
     testimonials = [],
     projects = [],
+    contacts = personalInfo?.contacts || [],
   } = fetchedData;
 
-  // Resolve icon references in technologies
-  const resolvedTechnologies = technologies.map(tech => ({
-    ...tech,
-    icon: resolveIcon(tech.icon) || tech.icon, // Use resolved icon or fall back to original string
+  const resolvedTechnologies = technologies
+    .map(tech => ({
+      ...tech,
+      icon: resolveIcon(tech.icon)
+    }))
+    .filter(tech => tech.icon); // Only keep technologies with valid icons
+
+  const resolvedServices = services
+    .map(service => ({
+      ...service,
+      icon: resolveIcon(service.icon)
+    }))
+    .filter(service => service.icon); // Only keep services with valid icons
+
+  const resolvedExperiences = experiences.map(experience => ({
+    ...experience,
+    icon: resolveIcon(experience.icon)
   }));
 
-  // Resolve icon references in services
-  const resolvedServices = services.map(service => ({
-    ...service,
-    icon: resolveIcon(service.icon) || service.icon,
+  const resolvedTestimonials = testimonials.map(testimonial => ({
+    ...testimonial,
+    image: resolveIcon(testimonial.image) || ''
   }));
 
-  // Resolve icon references in experiences
-  const resolvedExperiences = experiences.map(exp => ({
-    ...exp,
-    icon: resolveIcon(exp.icon) || exp.icon,
-  }));
-
-  // Resolve icon references in testimonials
-  const resolvedTestimonials = testimonials.map(test => ({
-    ...test,
-    image: resolveIcon(test.image) || test.image,
-  }));
-
-  // Resolve icon references in projects
   const resolvedProjects = projects.map(project => ({
     ...project,
-    image: resolveIcon(project.image) || project.image,
+    image: resolveIcon(project.image) || ''
   }));
 
-  // Resolve contact icons
-  const resolvedContacts = (personalInfo.contacts || []).map(contact => ({
+  const resolvedContacts = contacts.map(contact => ({
     ...contact,
-    icon: resolveIcon(contact.icon) || contact.icon,
+    icon: resolveIcon(contact.icon)
   }));
-
-  const resolvedPersonalInfo = {
-    ...personalInfo,
-    contacts: resolvedContacts,
-  };
 
   return {
-    personalInfo: resolvedPersonalInfo,
+    personalInfo,
     services: resolvedServices,
     technologies: resolvedTechnologies,
     experiences: resolvedExperiences,
     testimonials: resolvedTestimonials,
     projects: resolvedProjects,
-    contacts: resolvedContacts,
+    contacts: resolvedContacts
   };
 };
-
-export default getConstantsData;

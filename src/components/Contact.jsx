@@ -9,9 +9,13 @@ import { slideIn } from "../utils/motion";
 import UFOCanvas from "./canvas/UFO";
 
 import ServiceCard from "./ServiceCard";
-import { contacts } from "../constants";
+import { usePortfolioContext } from "../context/PortfolioContext";
+// import { contacts } from "../constants";
 
 const Contact = () => {
+
+  const context = usePortfolioContext();
+  const contacts = context?.contacts || [];
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -41,9 +45,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Deepak Gola",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: personalInfo?.email || "er.deepakgola@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY

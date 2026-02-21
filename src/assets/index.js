@@ -1,96 +1,121 @@
-import logo from "./Golden-logo-transparent.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
-import github from "./github.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
+// Tech icons
+import javascript from './tech/javascript.png';
+import typescript from './tech/typescript.png';
+import html from './tech/html.png';
+import css from './tech/css.png';
+import reactjs from './tech/reactjs.png';
+import redux from './tech/redux.png';
+import tailwind from './tech/tailwind.png';
+import nodejs from './tech/nodejs.png';
+import mongodb from './tech/mongodb.png';
+import git from './tech/git.png';
+import github from './tech/github.png';
+import figma from './tech/figma.png';
+import docker from './tech/docker.png';
+import threejs from './tech/threejs.svg';
+import openai from './tech/openai.png';
+import rest from './tech/rest.png';
+import junit from './tech/junit.png';
+import spring from './tech/spring.png';
+import java from './tech/java.png';
+import microservices from './tech/microservices.png';
+import oauth from './tech/oauth.png';
+import security from './tech/security.png';
+import aws from './tech/aws.png';
+import azure from './tech/azure.png';
+import kafka from './tech/kafka.png';
+import redis from './tech/redis.png';
+import database from './tech/database.png';
+import cicd from './tech/cicd.png';
+import testing from './tech/testing.png';
+import playwright from './tech/playwright.png';
+import kubernetes from './tech/kubernetes.png';
 
-import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+// Service icons
+import mobile from './services/mobile.png';
+import backend from './services/backend.png';
+import creator from './services/creator.png';
+import web from './services/web.png';
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+// Contact icons
+import linkedin from './contacts/linkedin.png';
+import email from './contacts/email.png';
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+// Company icons
+import cognizant from './company/cognizant.png';
+import newgen from './company/newgen.png';
+import wheebox from './company/wheebox.png';
+import codeslipi from './company/codeslipi.png';
+import optum from './company/optum.png';
 
-import promptHub from './promptHub.png';
-import onlineAssessment from './onlineAssessment.jpg';
-import springAI from './springAI.jpg';
+// Project images
+import promptHub from './projects/promptHub.png';
+import springAI from './projects/springAI.jpg';
+import onlineAssessment from './projects/onlineAssessment.jpg';
 
-import email from './email.png';
-import linkedin from './linkedin.png';
-import cognizant from './cognizant.png';
-import newgen from './newgen.png';
-import wheebox from './wheebox.png';
-import codeslipi from './codeslipi.png';
-import openai from './openai.png';
-import rest from './rest.png';
-import junit from './junit.png';
-import spring from './spring.png';
-import java from './java.png';
-
+// Misc icons
+import close from './misc/close.svg';
+import menu from './misc/menu.svg';
+import logo from './misc/logo.svg';
 
 export {
-  logo,
-  backend,
-  creator,
-  mobile,
-  web,
-  github,
-  menu,
-  close,
-  css,
-  docker,
-  figma,
-  git,
-  html,
+  // Tech icons
   javascript,
-  mongodb,
-  nodejs,
+  typescript,
+  html,
+  css,
   reactjs,
   redux,
   tailwind,
-  typescript,
+  nodejs,
+  mongodb,
+  git,
+  github,
+  figma,
+  docker,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
-
-  promptHub,
-  onlineAssessment,
-  springAI,
-
-  email,
-  linkedin,
-  cognizant,
-  newgen,
-  wheebox,
-  codeslipi,
-
   openai,
   rest,
   junit,
   spring,
   java,
+  microservices,
+  oauth,
+  security,
+  aws,
+  azure,
+  kafka,
+  redis,
+  database,
+  cicd,
+  testing,
+  playwright,
+  kubernetes,
+  
+  // Service icons
+  mobile,
+  backend,
+  creator,
+  web,
+  
+  // Contact icons
+  linkedin,
+  email,
+  
+  // Company icons
+  cognizant,
+  newgen,
+  wheebox,
+  codeslipi,
+  optum,
+  
+  // Project images
+  promptHub,
+  springAI,
+  onlineAssessment,
+  
+  // Misc icons
+  close,
+  menu,
+  logo
 };

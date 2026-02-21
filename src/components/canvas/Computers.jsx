@@ -87,15 +87,6 @@ const ComputersCanvas = () => {
     };
   }, []);
 
-  // Handle loading states
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000); // Timeout after 3 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
-
   // Enhanced error handling
   const handleError = (error) => {
     console.error("3D Model Error:", error);
@@ -122,19 +113,24 @@ const ComputersCanvas = () => {
 
   if (error) {
     return (
-      <div className="w-full h-[400px] flex items-center justify-center bg-tertiary rounded-lg">
-        <p className="text-secondary">Failed to load 3D model</p>
+      <div className="w-full h-[100vh] flex items-center justify-center bg-gradient-to-b from-tertiary to-primary">
+        <p className="text-secondary text-lg">3D model unavailable</p>
       </div>
     );
   }
 
   return (
-    <div className="w-full h-[100vh] relative">
+    <div className="w-full h-[100vh] relative bg-gradient-to-b from-tertiary to-primary/20">
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center z-10 bg-tertiary/50">
-          <div className="flex flex-col items-center">
-            <div className="w-12 h-12 border-4 border-t-primary border-r-primary border-b-secondary border-l-secondary rounded-full animate-spin mb-4"></div>
-            <p className="text-white">Loading 3D model...</p>
+        <div className="absolute inset-0 flex items-center justify-center z-10 bg-gradient-to-b from-tertiary/80 to-primary/30 backdrop-blur-sm">
+          <div className="flex flex-col items-center gap-4">
+            <div className="relative w-16 h-16">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#915EFF] to-[#00d4ff] rounded-full animate-spin" style={{ mask: 'radial-gradient(farthest-side, transparent calc(100% - 4px), black calc(100% - 4px))' }}></div>
+            </div>
+            <div className="flex flex-col items-center">
+              <p className="text-white font-semibold">Loading experience...</p>
+              <p className="text-gray-400 text-sm mt-1">Setting up your 3D environment</p>
+            </div>
           </div>
         </div>
       )}

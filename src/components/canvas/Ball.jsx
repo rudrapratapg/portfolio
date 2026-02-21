@@ -6,54 +6,53 @@ import CanvasLoader from "../Loader";
 import ErrorBoundary from "../ErrorBoundary";
 
 const Ball = (props) => {
-  // Handle both imported modules and string paths
-  const iconUrl = typeof props.imgUrl === 'string' ? props.imgUrl : props.imgUrl;
-  
-  try {
-    const [decal] = useTexture([iconUrl], (textures) => textures);
+  const [decal] = useTexture([props.imgUrl]);
 
-    return (
-      <mesh castShadow={false} receiveShadow={false} scale={2.75}>
-        <icosahedronGeometry args={[1, 2]} />
-        <meshPhongMaterial
+  return (
+    <group>
+      <mesh castShadow={false} receiveShadow={false} scale={2.75} rotation={[0, 0, 0]}>
+        {/* Coin shape using cylinder with very small height */}
+        <cylinderGeometry args={[1, 1, 0.1, 32]} />
+        <meshStandardMaterial
           color="#fff8eb"
-          polygonOffset
-          polygonOffsetFactor={-5}
-          flatShading
-          shininess={30}
+          metalness={0.3}
+          roughness={0.4}
         />
-        {decal && (
-          <Decal
-            position={[0, 0, 1]}
-            rotation={[2 * Math.PI, 0, 6.25]}
-            scale={1}
-            map={decal}
-            flatShading
-          />
-        )}
-      </mesh>
-    );
-  } catch (error) {
-    console.warn('Failed to load texture:', error);
-    // Return a basic mesh without the texture if loading fails
-    return (
-      <mesh castShadow={false} receiveShadow={false} scale={2.75}>
-        <icosahedronGeometry args={[1, 2]} />
-        <meshPhongMaterial
-          color="#fff8eb"
-          polygonOffset
-          polygonOffsetFactor={-5}
+        {/* Front side decal */}
+        <Decal
+          position={[0, 0.05, 0]}
+          rotation={[0, 0, 0]}
+          scale={1.1}
+          map={decal}
           flatShading
-          shininess={30}
         />
       </mesh>
-    );
-  }
+      
+      {/* Rotating animation applied to group */}
+      <mesh 
+        castShadow={false} 
+        receiveShadow={false} 
+        scale={2.75}
+        rotation={[0, 0, 0]}
+      >
+        <ambientLight intensity={0.6} />
+      </mesh>
+    </group>
+  );
 };
 
 const BallCanvas = ({ icon }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+
+  // Validate that icon is a valid path/URL
+  if (!icon || typeof icon !== 'string') {
+    return (
+      <div className="w-24 h-24 md:w-28 md:h-28 flex items-center justify-center bg-tertiary rounded-lg">
+        <span className="text-xs text-gray-500">No icon</span>
+      </div>
+    );
+  }
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
@@ -93,23 +92,22 @@ const BallCanvas = ({ icon }) => {
             preserveDrawingBuffer: false,
             antialias: performanceSettings.antialias,
             alpha: true,
-            powerPreference: isMobile ? "low-power" : "default",
+            powerPreference: isMobile ? "low-power" : "high-performance",
             logarithmicDepthBuffer: false,
           }}
           camera={{ position: [0, 0, 5], fov: 90 }}
           style={{ pointerEvents: "none" }}
-          onError={() => setIsVisible(false)}
         >
           <Suspense fallback={<CanvasLoader />}>
-            <ambientLight intensity={isMobile ? 0.3 : 0.5} />
-            <directionalLight position={[0, 0, 0.05]} intensity={isMobile ? 0.4 : 0.8} />
+            <ambientLight intensity={isMobile ? 0.5 : 0.7} />
+            <directionalLight position={[5, 5, 5]} intensity={isMobile ? 0.6 : 1} />
             <OrbitControls
               enableZoom={false}
               autoRotate={!isMobile}
-              autoRotateSpeed={isMobile ? 3 : 5}
+              autoRotateSpeed={isMobile ? 8 : 12}
               enablePan={false}
-              maxPolarAngle={Math.PI / 2}
-              minPolarAngle={Math.PI / 2}
+              maxPolarAngle={Math.PI}
+              minPolarAngle={0}
             />
             <Ball imgUrl={icon} />
           </Suspense>
