@@ -57,12 +57,14 @@ const About = () => {
         </p>
       </motion.div>
       <div className="mt-8 flex gap-4">
-        <button 
-          className="bg-tertiary py-3 px-6 rounded-xl outline-none border-none font-bold text-white shadow-md hover:bg-opacity-90 transition-all"
-          onClick={() => window.open("https://www.linkedin.com/in/deepak-gola/", "_blank")}
+        <a 
+          href={personalInfo?.resume}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-tertiary py-3 px-6 rounded-xl outline-none border-none font-bold text-white shadow-md hover:bg-opacity-90 transition-all cursor-pointer inline-block"
         >
           View Resume
-        </button>
+        </a>
         <button 
           className="bg-transparent py-3 px-6 rounded-xl outline-none border-2 border-tertiary font-bold text-white shadow-md hover:bg-tertiary hover:bg-opacity-20 transition-all"
           onClick={() => {
